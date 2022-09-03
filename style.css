@@ -3,7 +3,7 @@ body {
 }
 
 .player{
-    width: 100px;
+    width: 86px;
     height: 100px;
     background-image: url("/assets/player_front.png");
     background-size: 240px 100px;
