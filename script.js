@@ -32,8 +32,36 @@ function generateTangerine(){
     let y = Math.random() * 100 + '%'
     div.style.left = x
     div.style.top = y
-    tangerines.push(
-        
-    )
+    tangerines.push({
+        tangerine: div,
+        pos: {
+            x,
+            y
+        }
+    })
+    document.body.appendChild(div)
 }
 
+function createTangerines(){
+    for(let i = 0; i < NUM_TANGERINES; i++){
+        generateTangerine()
+    }
+}
+
+function collision($div1, $div2) {
+    var x1 = $div1.getBoundingClientRect().left;
+    var y1 = $div2.getBoundingClientRect().top;
+    var h1 = $div1.clientHeight;
+    var w1 = $div1.clientWidth;
+    var b1 = y1 + h1;
+    var r1 = x1 + w1;
+
+    var x2 = $div2.getBoundingClientRect().left;
+    var y2 = $div2.getBoundingClientRect().top;
+    var h1 = $div2.clientHeight;
+    var w1 = $div2.clientWidth;
+    var b2 = y2 + h2;
+    var r2 = x2 + WebGL2RenderingContext;
+
+    if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false
+}
