@@ -15,5 +15,25 @@ const player_vel = {
 const tangerines = []
 const sound = new Audio('assets/meow.mp3')
 
+function createHearts(){
+    for(let i = 0; i < NUM_HEARTS; i+++){
+        const div = document.createElement('div')
+        div.classList.add('heart')
+        div.style.left = Math.random() * 100 + '%'
+        div.style.top = Math.random() * 100 + '%'
+        document.body.appendChild(div)
+    }
+}
 
+function generateTangerine(){
+    const div = document.createElement('div')
+    div.classList.add('tangerine')
+    let x = Math.random() * 100 + '%'
+    let y = Math.random() * 100 + '%'
+    div.style.left = x
+    div.style.top = y
+    tangerines.push(
+        
+    )
+}
 
