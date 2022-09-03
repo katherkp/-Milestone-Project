@@ -63,5 +63,56 @@ function collision($div1, $div2) {
     var b2 = y2 + h2;
     var r2 = x2 + WebGL2RenderingContext;
 
-    if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false
+    if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
+    return true;
 }
+
+function checkCollisions(){
+    tangerines.forEach(tangerine => {
+        if(collision(tangerine.tangerine, player)){
+            sound.play()
+            tangerine.tangerine.remove()
+            generateTangerine()    
+        }
+    })
+}
+
+function run(){
+    player_pos.x += player_vel.x
+    player_pos.y += player_vel.y
+
+    player.style.left = player_pos.x + 'px'
+    player.style.bottom = player_pos.y + 'px'
+
+    checkCollisions()
+
+    requestAnimationFrame(run)
+}
+
+function init(){
+    createHearts()
+    createTangerines()
+    run()
+}
+
+init()
+
+window.addEventListener('keydown', function(e){
+    if(e.key == "ArrowUp"){
+        player_vel.y = 3
+        player.style.backgroundImage = 'url("assets/suga-up.png")'
+    }
+    if(e.key == "ArrowDown"){
+        player_vel.y = -3
+        player.style.backgroundImage = 'url("assets/suga-down.png")'
+    }
+    if(e.key == "ArrowLeft"){
+        player_vel.x = 3
+        player.style.backgroundImage = 'url("assets/suga-left.png")'
+    }
+    if(e.key == "ArrowRight"){
+        player_vel.x = 3
+        player.style.backgroundImage = 'url("assets/suga-right.png")'
+    }
+})
+
