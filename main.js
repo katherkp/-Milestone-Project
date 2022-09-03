@@ -1,4 +1,4 @@
-const NUM_HEARTS = 50
+const NUM_HEARTS = 40
 const NUM_TANGERINES = 7
 
 const player = document.querySelector('.player')
@@ -104,15 +104,15 @@ window.addEventListener('keydown', function(e){
     }
     if(e.key == "ArrowDown"){
         player_vel.y = -3
-        player.style.backgroundImage = 'url("assets/player-down.png")'
+        player.style.backgroundImage = 'url("assets/player_front.png")'
     }
     if(e.key == "ArrowLeft"){
         player_vel.x = 3
-        player.style.backgroundImage = 'url("assets/player-left.png")'
+        player.style.backgroundImage = 'url("assets/player_left.png")'
     }
     if(e.key == "ArrowRight"){
         player_vel.x = 3
-        player.style.backgroundImage = 'url("assets/player-right.png")'
+        player.style.backgroundImage = 'url("assets/player_right.png")'
     }
     player.classList.add('active')
 })
