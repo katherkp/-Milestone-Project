@@ -100,19 +100,19 @@ init()
 window.addEventListener('keydown', function(e){
     if(e.key == "ArrowUp"){
         player_vel.y = 3
-        player.style.backgroundImage = 'url("assets/suga-up.png")'
+        player.style.backgroundImage = 'url("asset/player-up.png")'
     }
     if(e.key == "ArrowDown"){
         player_vel.y = -3
-        player.style.backgroundImage = 'url("assets/suga-down.png")'
+        player.style.backgroundImage = 'url("assets/player-down.png")'
     }
     if(e.key == "ArrowLeft"){
         player_vel.x = 3
-        player.style.backgroundImage = 'url("assets/suga-left.png")'
+        player.style.backgroundImage = 'url("assets/player-left.png")'
     }
     if(e.key == "ArrowRight"){
         player_vel.x = 3
-        player.style.backgroundImage = 'url("assets/suga-right.png")'
+        player.style.backgroundImage = 'url("assets/player-right.png")'
     }
     player.classList.add('active')
 })
