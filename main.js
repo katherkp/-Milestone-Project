@@ -100,14 +100,14 @@ init()
 window.addEventListener('keydown', function(e){
     if(e.key == "ArrowUp"){
         player_vel.y = 3
-        player.style.backgroundImage = 'url("asset/player-up.png")'
+        player.style.backgroundImage = 'url("assets/player-up.png")'
     }
     if(e.key == "ArrowDown"){
         player_vel.y = -3
         player.style.backgroundImage = 'url("assets/player_front.png")'
     }
     if(e.key == "ArrowLeft"){
-        player_vel.x = 3
+        player_vel.x = -3
         player.style.backgroundImage = 'url("assets/player_left.png")'
     }
     if(e.key == "ArrowRight"){
