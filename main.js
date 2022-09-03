@@ -16,7 +16,7 @@ const tangerines = []
 const sound = new Audio('assets/meow.mp3')
 
 function createHearts(){
-    for(let i = 0; i < NUM_HEARTS; i+++){
+    for(let i = 0; i < NUM_HEARTS; i++){
         const div = document.createElement('div')
         div.classList.add('heart')
         div.style.left = Math.random() * 100 + '%'
@@ -117,7 +117,7 @@ window.addEventListener('keydown', function(e){
     player.classList.add('active')
 })
 
-window.addEventListener('keyup' function(){
+window.addEventListener('keyup', function(){
     player_vel.x = 0
     player_vel.y = 0
     player.classList.remove('active')
