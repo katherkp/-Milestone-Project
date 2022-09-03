@@ -114,5 +114,11 @@ window.addEventListener('keydown', function(e){
         player_vel.x = 3
         player.style.backgroundImage = 'url("assets/suga-right.png")'
     }
+    player.classList.add('active')
 })
 
+window.addEventListener('keyup' function(){
+    player_vel.x = 0
+    player_vel.y = 0
+    player.classList.remove('active')
+})
