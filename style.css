@@ -1,5 +1,5 @@
 body {
-    background-image: url(/assets/purple-pixel-sky.png);
+    background-image: url("/assets/purple-pixel-sky.png");
 }
 
 .player{
