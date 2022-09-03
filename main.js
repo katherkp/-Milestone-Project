@@ -61,7 +61,7 @@ function collision($div1, $div2) {
     var h1 = $div2.clientHeight;
     var w1 = $div2.clientWidth;
     var b2 = y2 + h2;
-    var r2 = x2 + WebGL2RenderingContext;
+    var r2 = x2 + w2;
 
     if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
     return true;
